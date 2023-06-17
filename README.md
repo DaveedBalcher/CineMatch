@@ -1,2 +1,2 @@
 # CineMatch
-A platform that collect user movie ratings and uses LLM to recommend the optimal movie to watch
+A platform for collecting user movie ratings and recommending the optimal movie to watch via LLM
