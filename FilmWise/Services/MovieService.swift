@@ -89,10 +89,16 @@ struct MovieRatingRequest: Encodable {
     let results: [UserRating]
 }
 
+protocol MovieServiceProtocol {
+    func fetchMovies() async throws -> [Movie]
+    func postUserRating(userRatings: [UserRating], user: User) async throws
+    func fetchMovieRecomendations(users: [User]) async throws -> [Movie]
+}
+
 typealias MovieQuizResponse = [Movie]
 typealias MovieRecsResponse = [Movie]
 
-class MovieService: ObservableObject {
+class MovieService: MovieServiceProtocol, ObservableObject {
     func fetchMovies() async throws -> MovieQuizResponse {
         let url = URL(string: "https://worker.jawn.workers.dev/api/v1/movies/quiz")!
         let (data, _) = try await URLSession.shared.data(from: url)
