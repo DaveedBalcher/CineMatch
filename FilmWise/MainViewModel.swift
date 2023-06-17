@@ -80,17 +80,19 @@ class MainViewModel: ObservableObject {
                 return
             }
             
-            if rating != -1 {
-                let userRating = UserRating(title: movie.title, rating: rating+1, imbdID: newMovie.imdbID)
-                self.ratings.append(userRating)
-            }
-            
-            if self.ratings.count < 10 {
-                self.appScreen = .quiz(movie: newMovie, ratingsLeft: 10 - self.ratings.count)
-            } else {
-                Task {
-                    await self.addRatingsToUser()
-                    self.showSync()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                if rating != -1 {
+                    let userRating = UserRating(title: movie.title, rating: rating+1, imbdID: newMovie.imdbID)
+                    self.ratings.append(userRating)
+                }
+                
+                if self.ratings.count < 10 {
+                    self.appScreen = .quiz(movie: newMovie, ratingsLeft: 10 - self.ratings.count)
+                } else {
+                    Task {
+                        await self.addRatingsToUser()
+                        self.showSync()
+                    }
                 }
             }
         }
