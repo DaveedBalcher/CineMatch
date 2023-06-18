@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1735561C2A3DEFAF00F7862D /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1735561B2A3DEFAF00F7862D /* UserDefaultsManager.swift */; };
 		17B038532A37DBC800D2E326 /* FilmWiseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B038522A37DBC800D2E326 /* FilmWiseApp.swift */; };
 		17B038552A37DBC800D2E326 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B038542A37DBC800D2E326 /* LoginView.swift */; };
 		17B038572A37DBC900D2E326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B038562A37DBC900D2E326 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1735561B2A3DEFAF00F7862D /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		17B0384F2A37DBC800D2E326 /* FilmWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B038522A37DBC800D2E326 /* FilmWiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmWiseApp.swift; sourceTree = "<group>"; };
 		17B038542A37DBC800D2E326 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				17B0388C2A38BB2000D2E326 /* Info.plist */,
 				17B038522A37DBC800D2E326 /* FilmWiseApp.swift */,
 				17B0388A2A37F7C200D2E326 /* MainViewModel.swift */,
+				1735561B2A3DEFAF00F7862D /* UserDefaultsManager.swift */,
 				17B0388E2A38F5E400D2E326 /* Services */,
 				17B0388D2A38F5D100D2E326 /* Views */,
 				17B038562A37DBC900D2E326 /* Assets.xcassets */,
@@ -250,6 +253,7 @@
 				17B038532A37DBC800D2E326 /* FilmWiseApp.swift in Sources */,
 				17B038902A38F60F00D2E326 /* UserService.swift in Sources */,
 				17B038922A38FB2700D2E326 /* MovieService.swift in Sources */,
+				1735561C2A3DEFAF00F7862D /* UserDefaultsManager.swift in Sources */,
 				17B038852A37F35B00D2E326 /* QuizView.swift in Sources */,
 				17B0388B2A37F7C200D2E326 /* MainViewModel.swift in Sources */,
 				17B038942A3A84B700D2E326 /* RecommendationView.swift in Sources */,

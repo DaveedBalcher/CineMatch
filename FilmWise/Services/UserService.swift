@@ -22,7 +22,13 @@ struct UserRating: Codable {
 typealias AllUsersResponse = [User]
 typealias UserRatingsResponse = [UserRating]
 
-class UserService: ObservableObject {
+protocol UserServiceProtocol {
+    func createUser(name: String) async throws
+    func fetchAllUsers() async throws -> [User]
+    func fetchRatings(for user: User) async throws -> [UserRating]
+}
+
+class UserService: UserServiceProtocol, ObservableObject {
     func createUser(name: String) async throws {
         let url = URL(string: "https://worker.jawn.workers.dev/api/v1/user")!
         var request = URLRequest(url: url)

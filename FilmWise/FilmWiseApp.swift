@@ -11,7 +11,7 @@ class MainFlow {
     init(vm: MainViewModel) {
         vm.appScreen = .intro
         
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.8) {
             if vm.shouldShowLogin() {
                 vm.showLogin()
             } else {
